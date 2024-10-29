@@ -198,7 +198,7 @@ export function calculateFarmingWeight(userProfile) {
     for (const [name, crop] of Object.entries(crops)) {
       const { amount = 0 } = farmingCollection.find((a) => a.id === name);
 
-      const pest = pests.find((a) => a.name === CROP_TO_PEST[name]);
+      const pest = pests?.find((a) => a.name === CROP_TO_PEST[name]);
       const pestCrops = calculatePestCrops(pest);
 
       const calculated = Math.max(amount - pestCrops, 0) / crop.weight;
