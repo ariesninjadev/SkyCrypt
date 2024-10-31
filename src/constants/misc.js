@@ -423,7 +423,7 @@ export const ESSENCE_SHOP = {
     },
     catacombs_looting: {
       name: "Looting",
-      description: "Increases the quality of mob loot drops in The Catacombs by 1-10%.",
+      description: "Increases the quality of mob loot drops in The Catacombs by 2-10%.",
       maxLevel: 5,
     },
     revive_stone: {
@@ -495,29 +495,9 @@ export const ESSENCE_SHOP = {
     },
   },
   dragon: {
-    inc_zealots_odds: {
-      name: "Zealuck",
-      description: "Increases the chance to find a special Zealot by 2-10%.",
-      maxLevel: 5,
-    },
-    combat_wisdom_in_end: {
-      name: "Ender Training",
-      description: "Gain + 3 - 7 Combat Wisdom while in The End.",
-      maxLevel: 2,
-    },
-    edrag_cd: {
-      name: "Infused Dragon",
-      description: "Increases the Crit Damage of your Ender Dragon Pet by + 2 - 10 CD.",
-      maxLevel: 5,
-    },
-    dragon_reforges_buff: {
-      name: "Two-Headed Strike",
-      description: "Renowed and Spiked Reforges apply an extra 2-10 Bonus Attack Speed on your gear.",
-      maxLevel: 4,
-    },
-    fero_vs_dragons: {
-      name: "Rageborn",
-      description: "Gain +2-10 Ferocity against Dragons.",
+    flat_damage_vs_ender: {
+      name: "One Punch",
+      description: "After all other damage, add 500-2,500 damage to the first strike against Endermen and Endermites.",
       maxLevel: 5,
     },
     mana_after_ender_kill: {
@@ -525,10 +505,34 @@ export const ESSENCE_SHOP = {
       description: "Regain 2-20 Mana after killing an Enderman or Endermite.",
       maxLevel: 10,
     },
-    flat_damage_vs_ender: {
-      name: "One Punch",
-      description:
-        "After all other damage, add 500 - 2,500 damage to the first strike against Endermen and Endermites.",
+    fero_vs_dragons: {
+      name: "Rageborn",
+      description: "Gain +2-10 Ferocity against Dragons.",
+      maxLevel: 5,
+    },
+    inc_zealots_odds: {
+      name: "Zealuck",
+      description: "Increases the chance to find a special Zealot by 2-10%.",
+      maxLevel: 5,
+    },
+    combat_wisdom_in_end: {
+      name: "Ender Training",
+      description: "Gain +3-7 Combat Wisdom while in The End.",
+      maxLevel: 3,
+    },
+    edrag_cd: {
+      name: "Infused Dragon",
+      description: "Increases the Crit Damage of your Ender Dragon Pet by +2-10 CD.",
+      maxLevel: 5,
+    },
+    unbridled_rage: {
+      name: "Unbridled Rage",
+      description: "Increases Berserk class experience by 2-10%.",
+      maxLevel: 5,
+    },
+    dragon_reforges_buff: {
+      name: "Two-Headed Strike",
+      description: "Renowed and Spiked Reforges apply an extra 2-10 Bonus Attack Speed on your gear.",
       maxLevel: 5,
     },
     increased_sup_chances: {
@@ -544,20 +548,25 @@ export const ESSENCE_SHOP = {
       description: "Reduces the Mana cost of some movement abilities by 1-10%.",
       maxLevel: 10,
     },
-    bane: {
-      name: "Bane",
-      description: "Increases damage dealt to Spiders by 3-15%.",
-      maxLevel: 5,
-    },
     vermin_control: {
       name: "Vermin Control",
       description: "Receive 3-15% less damage from Spiders.",
+      maxLevel: 5,
+    },
+    bane: {
+      name: "Bane",
+      description: "Increases damage dealt to Spiders by 3-15%.",
       maxLevel: 5,
     },
     spider_training: {
       name: "Spider Training",
       description: "Increases your Combat Wisdom by 3-10 while on the Spider's Den.",
       maxLevel: 3,
+    },
+    toxophilite: {
+      name: "Toxophilite",
+      description: "Increases Archer class experience gain by 2-10%.",
+      maxLevel: 5,
     },
   },
   ice: {
@@ -573,7 +582,7 @@ export const ESSENCE_SHOP = {
     },
     frozen_skin: {
       name: "Frozen Skin",
-      description: "Increases your Defense by 2-10 while on Jerry's Workshop.",
+      description: "Grants 2-10 Cold Resistance.",
       maxLevel: 5,
     },
     season_of_joy: {
@@ -595,7 +604,8 @@ export const ESSENCE_SHOP = {
     },
     fresh_tools_kuudra: {
       name: "Fresh Tools",
-      description: "2-15% chance to double the speed of repairing Elle's Ballista for 5s during the Kuudra Boss Fight.",
+      description:
+        "5-15% chance to double the speed of repairing Elle's Ballista for 10s during the Kuudra Boss Fight.",
       maxLevel: 5,
     },
     headstart_kuudra: {
@@ -643,17 +653,17 @@ export const ESSENCE_SHOP = {
     },
     dwarven_training: {
       name: "Dwarven Training",
-      description: "Increases your Mining Wisdom by 3-10 while on Mining Islands.",
+      description: "Increases your Mining Wisdom by +3-10 while on Mining Islands.",
       maxLevel: 3,
     },
     unbreaking: {
       name: "Unbreaking",
-      description: "Increases your Vitality by 2-10.",
+      description: "Increases your Vitality by +2-10.",
       maxLevel: 5,
     },
     eager_miner: {
       name: "Eager Miner",
-      description: "Increases your Mining Speed by 10-100 while on Mining Islands.",
+      description: "Increases your Mining Speed by +10-100 while on Mining Islands.",
       maxLevel: 10,
     },
     midas_lure: {
@@ -675,12 +685,12 @@ export const ESSENCE_SHOP = {
     },
     rhinestone_infusion: {
       name: "Rhinestone Infusion",
-      description: "Adds 1 Breaking Power to all Diamond Pickaxes.",
-      maxLevel: 1,
+      description: "Grants +2-20 Gemstone Fortune.",
+      maxLevel: 10,
     },
     under_pressure: {
       name: "Under Pressure",
-      description: "Increase your Strength by 5-25 while on Mining Islands.",
+      description: "Increase your Strength by +5-25 while on Mining Islands.",
       maxLevel: 5,
     },
     high_roller: {
