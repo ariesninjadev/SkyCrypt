@@ -90,6 +90,7 @@ const accessoryUpgrades = [
   ["SCAVENGER_TALISMAN", "SCAVENGER_RING", "SCAVENGER_ARTIFACT"],
   ["EMERALD_RING", "EMERALD_ARTIFACT"],
   ["MINERAL_TALISMAN", "GLOSSY_MINERAL_TALISMAN"],
+  ["HASTE_RING", "HASTE_ARTIFACT"],
 ];
 
 const ignoredAccessories = [

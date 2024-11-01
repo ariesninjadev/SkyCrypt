@@ -107,7 +107,7 @@ function itemIcon(item, classes) { %>
           <span style='color: var(--§6);' class='grey-text'>3 MP</span> × <span style='color: var(--§c);' class='grey-text'><%= rarities.special.amount %> Accs.</span> = <span style='color: var(--§6);' class='grey-text'><%= rarities.special.magical_power.toLocaleString() %> MP</span><br>
           <span style='color: var(--§6);' class='grey-text'>5 MP</span> × <span style='color: var(--§c);' class='grey-text'><%= rarities.very_special.amount %> Accs.</span> = <span style='color: var(--§6);' class='grey-text'><%= rarities.very_special.magical_power.toLocaleString() %> MP</span><br>
           <br>
-          <% if (calculated.accessories.magical_power.abiphone) { %>
+          <% if (calculated.accessories.magical_power.abiphone && items.accessories.accessory_ids.find((a) => a.id === "ABICASE")) { %>
             <span style='color: var(--§<%= constants.RARITY_COLORS["rare"] %>);' class='grey-text'>Abicase</span> = <span style='color: var(--§6);' class='grey-text'>+<%= calculated.accessories.magical_power.abiphone %> MP</span><br>
           <% } %>
 
