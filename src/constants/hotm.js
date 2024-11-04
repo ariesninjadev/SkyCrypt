@@ -918,7 +918,7 @@ class WarmHeart extends Node {
 
   perk(level) {
     const val = round(level * 0.4, 1);
-    return [`§7Grants §b+${val} ${SYMBOLS.cold_resistence} Cold Resistance§7.`];
+    return [`§7Grants §b+${val} ${SYMBOLS.cold_resistance} Cold Resistance§7.`];
   }
 }
 
@@ -967,7 +967,7 @@ class MineshaftMayhem extends Node {
       "§8 ■ §a+5% §7chance to find a §9Suspicious Scrap§7.",
       `§8 ■ §7Gain §6+100 ${SYMBOLS.mining_fortune} Mining Fortune`,
       `§8 ■ §7Gain §6+200 ${SYMBOLS.mining_speed} Mining Speed`,
-      `§8 ■ §7Gain §b+10 ${SYMBOLS.cold_resistence} Cold Resistance`,
+      `§8 ■ §7Gain §b+10 ${SYMBOLS.cold_resistance} Cold Resistance`,
       "§8 ■ §7Reduce Pickaxe Ability cooldowns by §a-25%§7.",
     ];
   }

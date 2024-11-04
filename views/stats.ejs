@@ -387,7 +387,7 @@ const metaDescription = getMetaDescription()
           <strong>Please report the error on our <a href="https://discord.gg/cNgADv2kEQ" target="_blank" rel="noreferrer">Discord</a>.</strong>
         </p>
       </figure>
-    <% } else { %>
+    <% } else if (!calculated.display_emoji) { %>
       <figure class="banner" style="padding: 20px;">
         <h2>
           Please consider donating to the SkyCrypt <strong><a href="https://www.patreon.com/shiiyu" style="color:#2E76FF;">Patreon</a></strong> in order to keep the website running.

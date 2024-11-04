@@ -358,10 +358,10 @@ export const STATS_DATA = {
     nameTiny: "SR",
     symbol: "Ⓢ",
   },
-  cold_resistence: {
-    name: "Cold Resistence",
-    nameLore: "Cold Resistence",
-    nameShort: "Cold Resistence",
+  cold_resistance: {
+    name: "Cold Resistance",
+    nameLore: "Cold Resistance",
+    nameShort: "Cold Resistance",
     nameTiny: "CR",
     symbol: "❄",
   },

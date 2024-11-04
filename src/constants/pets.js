@@ -424,7 +424,7 @@ export const PET_DATA = {
   },
   BAL: {
     head: "/head/c469ba2047122e0a2de3c7437ad3dd5d31f1ac2d27abde9f8841e1d92a8c5b75",
-    type: "combat",
+    type: "mining",
     maxTier: "legendary",
     maxLevel: 100,
     emoji: "🧨",
@@ -999,5 +999,10 @@ export const PET_ITEMS = {
     tier: "UNCOMMON",
     description:
       "§7Adds particles matching your §c+ §7color to your pet and yourself, defaulting to red. §8Editable in Hypixel lobbies.",
+  },
+  PET_ITEM_TITANIUM_MINECART: {
+    name: "Titanium Minecart",
+    tier: "RARE",
+    description: `§7Grants §6+33.3 ${SYMBOLS.mining_fortune} Mining Fortune§7 when mining §fTitanium Ore§7.`,
   },
 };

@@ -129,7 +129,7 @@ export async function getDungeons(userProfile) {
     };
 
     output.classes.classes[className].level.rank = await getLeaderboardPosition(
-      `dungeons_class_${className}_xp`,
+      `dungeons_${className}_class_xp`,
       data.experience,
     );
 

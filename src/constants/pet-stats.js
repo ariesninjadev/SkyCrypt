@@ -139,8 +139,11 @@ class Pet {
         case "swing_range":
           list.push(`§7Swing Range: ${formatStat(newStats[stat])}`);
           break;
-        case "cold_resistence":
-          list.push(`§7Cold Resistence: ${formatStat(newStats[stat])}`);
+        case "cold_resistance":
+          list.push(`§7Cold Resistance: ${formatStat(newStats[stat])}`);
+          break;
+        case "heat_resistance":
+          list.push(`§7Heat Resistance: ${formatStat(newStats[stat])}`);
           break;
         default:
           list.push(`§cUNKNOWN: ${stat}`);
@@ -994,8 +997,8 @@ class WitherSkeleton extends Pet {
 class Bal extends Pet {
   get stats() {
     return {
-      ferocity: this.level * 0.1,
-      strength: this.level * 0.25,
+      mining_fortune: this.level * 1,
+      heat_resistance: this.level * 1.5,
     };
   }
 
@@ -1011,30 +1014,30 @@ class Bal extends Pet {
   }
 
   get first() {
+    const mult = getValue(this.rarity, { epic: 0.02, legendary: 0.03 });
     return {
-      name: "§6Protective Skin",
-      desc: [`§7§7Gives §cheat immunity§7.`],
+      name: "§6Furnace",
+      desc: [
+        `§7Grants §5+${round(this.level * mult, 1)} ${SYMBOLS.pristine} Pristine§7 while in the §cMagma Fields§7.`,
+      ],
     };
   }
 
   get second() {
-    const mult = getValue(this.rarity, { epic: 0.1 });
+    const mult = getValue(this.rarity, { epic: 0.04 });
     return {
-      name: "§6Fire Whip",
+      name: "§6Dispersion",
       desc: [
-        `§7Every §a5s §7while in combat on public islands, Bal will strike nearby enemies with his fire whip dealing §c${round(
-          this.level * mult,
-          1,
-        )}% §7of your damage as §ftrue damage§7.`,
+        `§7While in the §5Crystal Hollows§7, killing mobs reduces your §c${SYMBOLS.heat_resistance} Heat§7 by §c${floor(this.level * mult, 1)}§7.`,
       ],
     };
   }
 
   get third() {
-    const mult = getValue(this.rarity, { legendary: 0.15 });
+    const mult = getValue(this.rarity, { legendary: 0.1 });
     return {
-      name: "§6Made of Lava",
-      desc: [`§7Gain §a${round(this.level * mult, 1)}% §7on ALL stats when inside the §cMagma Fields§7.`],
+      name: "§6Chimney",
+      desc: [`§7Reduce Pickaxe Ability cooldowns by §a${floor(this.level * mult, 1)}%§7.`],
     };
   }
 }
@@ -3874,7 +3877,7 @@ class Penguin extends Pet {
     return {
       name: "§6Thick Blubber",
       desc: [
-        `§7Each time you catch a Sea Creature, reduce your §b${SYMBOLS.cold_resistence} Cold §7by §a${round(1 + floor(this.level / val), 1)}§7.`,
+        `§7Each time you catch a Sea Creature, reduce your §b${SYMBOLS.cold_resistance} Cold §7by §a${round(1 + floor(this.level / val), 1)}§7.`,
       ],
     };
   }
@@ -3904,7 +3907,7 @@ class Mammoth extends Pet {
   get stats() {
     return {
       defense: 0.5 * this.level,
-      cold_resistence: 0.1 * this.level,
+      cold_resistance: 0.1 * this.level,
     };
   }
 
@@ -3920,7 +3923,7 @@ class Mammoth extends Pet {
     return {
       name: "§6Wooly Coat",
       desc: [
-        `§7Gain a §a${round(this.level * mult, 1)}% §7chance for mobs to not inflict §b${SYMBOLS.cold_resistence} Cold §7when damaging you in the §bGlacite Mineshafts§7.`,
+        `§7Gain a §a${round(this.level * mult, 1)}% §7chance for mobs to not inflict §b${SYMBOLS.cold_resistance} Cold §7when damaging you in the §bGlacite Mineshafts§7.`,
       ],
     };
   }
@@ -3998,7 +4001,7 @@ class GlaciteGolem extends Pet {
   get stats() {
     return {
       mining_speed: 1.25 * this.level,
-      cold_resistence: 0.05 * this.level,
+      cold_resistance: 0.05 * this.level,
     };
   }
 
