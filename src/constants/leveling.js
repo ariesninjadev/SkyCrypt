@@ -87,12 +87,12 @@ export const DEFAULT_SKILL_CAPS = {
   fishing: 50,
   enchanting: 60,
   alchemy: 50,
-  taming: 50,
+  taming: 60,
   carpentry: 50,
   runecrafting: 25,
   social: 25,
   dungeoneering: 50,
-  skyblock_level: skyblockLevelSkillCap,
+  skyblock_level: 10000, // We omit a "cap" for level since each update brings a new cap.
 };
 
 export const MAXED_SKILL_CAPS = {
@@ -100,7 +100,7 @@ export const MAXED_SKILL_CAPS = {
 };
 
 export const MAXED_SKILL_XP = {
-  skyblock_level: skyblockLevelMaxExperience,
+  skyblock_level: 100000, // omit
 };
 
 export const RUNECRAFTING_XP = {
