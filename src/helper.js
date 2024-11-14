@@ -1135,7 +1135,7 @@ export async function sendWebhookMessage(e, { username, profile }) {
       description += `Profile: \`${profile}\`\n`;
     }
 
-    description += `Link: https://sky.shiiyu.moe/stats/${username}${profile ? `/${profile}` : ""}\n`;
+    description += `Link: https://skyblock.aries.ninja/${username}${profile ? `/${profile}` : ""}\n`;
     description += `\`\`\`${e.stack}\`\`\``;
 
     const embed = {

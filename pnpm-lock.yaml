@@ -111,8 +111,8 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1
       skyhelper-networth:
-        specifier: ^1.25.0
-        version: 1.25.0
+        specifier: ^1.26.0
+        version: 1.26.0
       tippy.js:
         specifier: ^6.3.7
         version: 6.3.7
@@ -2294,8 +2294,8 @@ packages:
   skinview3d@3.0.1:
     resolution: {integrity: sha512-2LUSkzGxlZrTQelGT10jcW4TLiFTg5aZqXMEuqAFoWtk3qtaNu0qRFtwK5dN8zEXyKUJ3xlxah5eGtKY/NifQg==}
 
-  skyhelper-networth@1.25.0:
-    resolution: {integrity: sha512-HCqZ2UDhwVokN2maBlcL4DQ1TT07mw3QnVP7+d2z/vMRoj3mDeKkdgbRdQhGKLEmp9uaIWq2GTOV9JXkH4QBqw==}
+  skyhelper-networth@1.26.0:
+    resolution: {integrity: sha512-QkBfMKt+tref6D3T+zmKzWwjJ135QEigXN/VpEmlD0FK0mJPSxuBxvnDYe3F9r3UyWpXVP7w6tge4s9tA8Hc1Q==}
 
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -4943,7 +4943,7 @@ snapshots:
       skinview-utils: 0.7.1
       three: 0.156.1
 
-  skyhelper-networth@1.25.0:
+  skyhelper-networth@1.26.0:
     dependencies:
       axios: 1.6.7
       prismarine-nbt: 2.5.0

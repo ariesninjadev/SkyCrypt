@@ -1,4 +1,5 @@
 // this file never runs on the master thread
+import https from "https";
 import * as lib from "./lib.js";
 import { getFileHashes, getFileHash, HASHED_DIRECTORIES } from "./hashes.js";
 import fetch from "node-fetch";
@@ -43,7 +44,13 @@ import * as leatherRoute from "./routes/leather.js";
 import * as potionRoute from "./routes/potion.js";
 import { SkyCryptError } from "./constants/error.js";
 
+
 const folderPath = helper.getFolderPath();
+
+const sslOptions = {
+  key: fs.readFileSync(path.join(folderPath, "../public/private.key")),
+  cert: fs.readFileSync(path.join(folderPath, "../public/certificate.crt")),
+};
 
 const manifest = JSON.parse(fs.readFileSync(path.join(folderPath, "../public/manifest.json")));
 
@@ -149,7 +156,8 @@ await apiv2Route.init();
 await apiRoute.init();
 
 const app = express();
-const port = process.env.SKYCRYPT_PORT ?? 32464;
+const port = process.env.SKYCRYPT_PORT ?? 443;
+const host = '0.0.0.0';
 
 let sitemap;
 
@@ -403,7 +411,7 @@ app.all("/robots.txt", async (req, res, next) => {
   res
     .type("text")
     .send(
-      `User-agent: *\nDisallow: /item /cape /head /leather /potion /resources\nSitemap: https://sky.shiiyu.moe/sitemap.xml`,
+      `User-agent: *\nDisallow: /item /cape /head /leather /potion /resources\nSitemap: https://skyblock.aries.ninja/sitemap.xml`,
     );
 });
 
@@ -417,7 +425,7 @@ app.all("/sitemap.xml", async (req, res, next) => {
   }
 
   try {
-    const smStream = new SitemapStream({ hostname: "https://sky.shiiyu.moe/" });
+    const smStream = new SitemapStream({ hostname: "https://skyblock.aries.ninja/" });
     const pipeline = smStream.pipe(createGzip());
 
     const cursor = await db.collection("featuredProfiles").find();
@@ -526,4 +534,8 @@ app.all("*", async (req, res, next) => {
   res.status(404).type("txt").send("Not found");
 });
 
-app.listen(port, () => console.log(`SkyBlock Stats running on http://localhost:${port} (${helper.getClusterId()})`));
+// app.listen(port, () => console.log(`SkyBlock Stats running on http://localhost:${port} (${helper.getClusterId()})`));
+
+https.createServer(sslOptions, app).listen(port, host, () => {
+  console.log(`SkyBlock Stats running on https://${host}:${port} (${helper.getClusterId()})`);
+});

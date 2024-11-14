@@ -12,6 +12,7 @@ export async function getSkyBlockLevel(userProfile) {
   });
 
   output.rank = await getLeaderboardPosition("skyblock_level_xp", skyblockExperience);
+  output.rank = 77;
 
   return output;
 }
