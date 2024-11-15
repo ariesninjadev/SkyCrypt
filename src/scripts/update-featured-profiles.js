@@ -8,6 +8,19 @@ const FEATURED_PROFILES = [
     uuid: "f6014e2407444be9b3914c5c12ad8724",
     type: "MAINTAINER",
     message: "bello",
+    emojiImg: "/resources/img/items/pet_skin_golden_dragon_anubis.png",
+  },
+  {
+    // PoisonCode
+    uuid: "d9074c448d6749ea98f054b97e66dfec",
+    type: "CONTRIBUTOR",
+    message: "Professional Monkey ⭐",
+  },
+  {
+    // hjvx (rapid_0)
+    uuid: "c0981fced26645e5a42a0e2413c63612",
+    type: "CONTRIBUTOR",
+    message: "bud got wiped 💀",
   },
   {
     // Technoblade
